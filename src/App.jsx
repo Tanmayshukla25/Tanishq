@@ -110,24 +110,21 @@ function App() {
           </p>
         </div>
 
-        <div className="flex flex-wrap-reverse items-center justify-center gap-2.5">
-          <div className="w-[700px] ">
+        <div className="flex flex-wrap-reverse sm:flex-wrap items-center justify-center gap-2.5">
+          <div className="w-full sm:w-[700px]">
             <img src={Earing} alt="" className="rounded-xl w-full" />
           </div>
-          <div className="">
-            <div className="w-[480px] h-[411px]">
+
+          <div className="w-full sm:w-auto">
+            <div className="w-full sm:w-[480px] h-[auto] sm:h-[411px]">
               <img
                 src={jewellery}
                 alt=""
                 className="rounded-xl w-full h-full"
               />
             </div>
-            <div className="w-[480px] h-[411px]">
-              <img
-                src={chains}
-                alt=""
-                className="rounded-xl w-full h-full mt-1"
-              />
+            <div className="w-full sm:w-[480px] h-[auto] sm:h-[411px] mt-1">
+              <img src={chains} alt="" className="rounded-xl w-full h-full" />
             </div>
           </div>
         </div>
@@ -209,106 +206,117 @@ function App() {
         </div>
       </div>
 
-      <div className="text-center">
-        <div className="mt-[50px] mb-6 pt-[40px]">
-          <h1 className="text-4xl text-amber-950">Tanishq World</h1>
-          <p className="text-2xl text-gray-500">
-            A companion for every occasion
-          </p>
-        </div>
+    <div className="text-center">
 
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          <div className="">
-            <div className="relative w-[606px] h-[385px]">
-              <img
-                src={weddingImages}
-                alt="Wedding"
-                className="rounded-xl w-full h-full object-cover"
-              />
-              <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
-                <h2 className="text-white text-4xl font-bold drop-shadow-lg">
-                  Wedding
-                </h2>
-              </div>
-            </div>
+  <div className="mt-[50px] mb-6 pt-[40px]">
+    <h1 className="text-3xl sm:text-4xl text-amber-950">Tanishq World</h1>
+    <p className="text-xl sm:text-2xl text-gray-500">
+      A companion for every occasion
+    </p>
+  </div>
 
-            <div className="w-[606px] relative h-[432px]">
-              <img
-                src={images3}
-                alt=""
-                className="rounded-xl w-full h-full mt-1 object-cover"
-              />
-              <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
-                <h2 className="text-white text-4xl font-bold drop-shadow-lg">
-                  Gold
-                </h2>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="w-[606px] h-[432px] relative">
-              <img
-                src={diamondimages}
-                alt=""
-                className="rounded-xl w-full h-full"
-              />
-              <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
-                <h2 className="text-white text-4xl font-bold drop-shadow-lg">
-                  Diamond
-                </h2>
-              </div>
-            </div>
-            <div className="w-[606px] relative  h-[385px] mt-1">
-              <img
-                src={dailywear}
-                alt=""
-                className="rounded-xl w-full h-full"
-              />
-              <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
-                <h2 className="text-white text-4xl font-bold drop-shadow-lg">
-                  Dailywear
-                </h2>
-              </div>
-            </div>
-          </div>
+  <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+   
+    <div className="w-full sm:w-[606px]">
+     
+      <div className="relative w-full sm:w-[606px] h-[auto] sm:h-[385px]">
+        <img
+          src={weddingImages}
+          alt="Wedding"
+          className="rounded-xl w-full h-full object-cover"
+        />
+        <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
+          <h2 className="text-white text-2xl sm:text-4xl font-bold drop-shadow-lg">
+            Wedding
+          </h2>
         </div>
       </div>
 
+     
+      <div className="relative w-full sm:w-[606px] h-[auto] sm:h-[432px] mt-1">
+        <img
+          src={images3}
+          alt="Gold"
+          className="rounded-xl w-full h-full object-cover"
+        />
+        <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
+          <h2 className="text-white text-2xl sm:text-4xl font-bold drop-shadow-lg">
+            Gold
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div className="w-full sm:w-[606px]">
+  
+      <div className="relative w-full sm:w-[606px] h-[auto] sm:h-[432px]">
+        <img
+          src={diamondimages}
+          alt="Diamond"
+          className="rounded-xl w-full h-full"
+        />
+        <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
+          <h2 className="text-white text-2xl sm:text-4xl font-bold drop-shadow-lg">
+            Diamond
+          </h2>
+        </div>
+      </div>
+
+    
+      <div className="relative w-full sm:w-[606px] h-[auto] sm:h-[385px] mt-1">
+        <img
+          src={dailywear}
+          alt="Dailywear"
+          className="rounded-xl w-full h-full"
+        />
+        <div className="absolute bottom-10 left-[40%] flex items-center justify-center">
+          <h2 className="text-white text-2xl sm:text-4xl font-bold drop-shadow-lg">
+            Dailywear
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       <div className="relative mb-[20rem]">
         <div
-          className="bg-cover bg-center h-[400px] w-full  mt-20 relative"
+          className="bg-cover bg-center h-[400px] w-full mt-20 relative"
           style={{ backgroundImage: `url(${backGroundImages})` }}
         >
-          <div className="absolute top-14 left-[7%]">
-            <div className="flex flex-wrap items-center pt-[20px] ">
-              <h1 className="text-white text-5xl mr-5">New Arrivals</h1>
-              <span className="flex flex-wrap  bg-gray-50 px-3 py-3 rounded-4xl opacity-40">
-                <img src={diamond} alt="" />
-                500+New Items
+          <div className="absolute top-14 left-[7%] px-4 sm:px-8">
+            <div className="flex flex-wrap items-center pt-[20px]">
+              <h1 className="text-white text-3xl sm:text-5xl mr-5">
+                New Arrivals
+              </h1>
+              <span className="flex flex-wrap bg-gray-50 px-3 py-2 rounded-4xl opacity-70 text-sm sm:text-base">
+                <img src={diamond} alt="" className="mr-2" />
+                500+ New Items
               </span>
             </div>
-            <p className="text-white text-3xl w-[750px]">
+            <p className="text-white text-lg sm:text-3xl w-full sm:w-[750px] mt-3">
               New Arrivals Dropping Daily, Monday through Friday. Explore the
               Latest Launches Now!
             </p>
           </div>
         </div>
 
-        <div className="flex flex-wrap align-center justify-center gap-10 absolute top-65 left-40">
-          <div className="relative w-[606px] h-[385px]  p-3  rounded-[10px] bg-white">
+       <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 absolute top-[63%]  w-full px-4 sm:px-8">
+
+          <div className="relative w-full sm:w-[606px] h-[auto] sm:h-[385px] p-3 sm:p-4 rounded-[10px] bg-white">
             <img
               src={mangalsutraImages}
-              alt=""
-              className=" w-full h-full object-cover"
+              alt="Mangalsutra"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
 
-          <div className="relative w-[606px] h-[385px] p-3  rounded-[10px] bg-white  ">
+          <div className="relative w-full sm:w-[606px] h-[auto] sm:h-[385px] p-3 sm:p-4 rounded-[10px] bg-white">
             <img
               src={pendantimg}
-              alt=""
-              className=" w-full h-full object-cover"
+              alt="Pendant"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
@@ -351,9 +359,8 @@ function App() {
           <h1 className="text-4xl ">Exchange Program</h1>
           <p className="text-2xl text-gray-500">Trusted by 2.8M+ families</p>
         </div>
-
         <div className="mt-10">
-          <video autoplay muted loop controls class="w-full ">
+          <video autoPlay muted loop controls className="w-full">
             <source
               src="https://staticimg.tanishq.co.in/videos/ge-dt.mp4"
               type="video/mp4"
@@ -441,59 +448,63 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-wrap align-items-center justify-center   gap-20 mb-[20px]">
-        <div className=" bg-[#f2e7e9] mt-1 w-[645px] h-[640px] shadow-[0_0px_2px_gray] rounded-4xl relative">
-          <div className="bg-orange-800 w-[40px] h-[640px] absolute left-23"></div>
-          <div className="bg-orange-800 w-[645px] h-[40px] absolute  bottom-23 "></div>
-          <div className="w-[200px] absolute bottom-13 left-12">
+      <div className="flex flex-wrap justify-center gap-20 mb-[20px]">
+        <div className="bg-[#f2e7e9] mt-1 w-full sm:w-[645px] h-[640px] shadow-[0_0px_2px_gray] rounded-4xl relative">
+          <div className="bg-orange-800 w-[40px] h-[640px] absolute left-0 sm:left-23"></div>
+          <div className="bg-orange-800 w-full sm:w-[645px] h-[40px] absolute bottom-0 sm:bottom-23"></div>
+
+          <div className="w-[200px] absolute bottom-4 sm:bottom-13 left-4 sm:left-12">
             <img src={flower} alt="" />
           </div>
-          <div className="absolute top-30 right-25">
-            <h1 className="text-6xl  text-amber-900">#GiftOfChoice</h1>
-            <p className="text-gray-700 text-xl mt-5">
+          <div className="absolute top-12 sm:top-30 right-4 sm:right-25">
+            <h1 className="text-3xl sm:text-6xl text-amber-900">
+              #GiftOfChoice
+            </h1>
+            <p className="text-gray-700 text-lg sm:text-xl mt-4 sm:mt-5">
               Breathtaking gifts for your loved one’s
             </p>
-            <h3 className="text-amber-900 text-2xl">STARTING AT ₹10,000</h3>
-
-            <button className="bg-white px-8 py-3  text-xl rounded-3xl flex  align-items-center border-1 mt-6 border-amber-950">
+            <h3 className="text-amber-900 text-xl sm:text-2xl">
+              STARTING AT ₹10,000
+            </h3>
+            <button className="bg-white px-6 py-3 sm:px-8 sm:py-3 text-lg sm:text-xl rounded-3xl flex items-center border-1 mt-4 sm:mt-6 border-amber-950">
               Explore Now{" "}
               <span className="mt-1 ml-2">
-                {" "}
                 <GrNext />
-              </span>{" "}
+              </span>
             </button>
           </div>
         </div>
 
-        <div className=" bg-[#fffcf7] mt-1 w-[545px] h-[640px] rounded-4xl border-1 border-amber-400  relative">
-          <div className="bg-[#fffcf7] w-[65px] h-[570px] mt-[35px] rounded-3xl border-l-1  border-amber-400 absolute left-[-45px]"></div>
-          <div className="bg-[#fffcf7] w-[65px] h-[570px] mt-[35px] rounded-3xl border-r-1 border-amber-400 absolute right-[-45px]"></div>
-          <div className="absolute left-7 top-20 w-[100px]">
+        <div className="bg-[#fffcf7] mt-1 w-full sm:w-[545px] h-[640px] rounded-4xl border-1 border-amber-400 relative">
+          <div className="bg-[#fffcf7] w-[65px] h-[570px] mt-[35px] rounded-3xl border-l-1 border-amber-400 absolute left-[-45px] sm:left-[-45px]"></div>
+          <div className="bg-[#fffcf7] w-[65px] h-[570px] mt-[35px] rounded-3xl border-r-1 border-amber-400 absolute right-[-45px] sm:right-[-45px]"></div>
+
+          <div className="absolute left-7 top-12 sm:top-20 w-[80px] sm:w-[100px]">
             <img src={homeexchange} alt="" className="w-full" />
           </div>
-          <div className="absolute top-50 right-25">
-            <h1 className="text-4xl  ">
+
+          <div className="absolute top-36 sm:top-50 right-4 sm:right-25 w-[90%] sm:w-auto">
+            <h1 className="text-xl sm:text-4xl">
               Exchange your Old Gold for 100% Value!
             </h1>
-            <p className="text-xl mt-5">
+            <p className="text-lg sm:text-xl mt-4 sm:mt-5">
               Unlock full value for your old gold today with our{" "}
               <span className="text-black font-extrabold">
                 Exchange Program !
               </span>
             </p>
 
-            <button className="bg-white px-8 py-3 rounded-3xl flex  text-xl align-items-center border-1 mt-16 border-amber-500">
+            <button className="bg-white px-6 py-3 sm:px-8 sm:py-3 rounded-3xl flex text-lg sm:text-xl items-center border-1 mt-8 sm:mt-16 border-amber-500">
               Know More
               <span className="mt-1 ml-2">
-           
                 <GrNext />
-              </span>{" "}
+              </span>
             </button>
           </div>
         </div>
       </div>
 
-      <Slider/>
+      <Slider />
 
       <div className="text-center mt-25 h-[110vh]">
         <div className="mb-15 ">
@@ -562,15 +573,11 @@ function App() {
         </div>
 
         <footer className="bg-[#2c0000] text-white py-10 mt-[100px] px-6 md:px-16 font-serif">
-
-           <div>
-                <img src={footerLogo} alt=""className="p-[20px] ml-[10%]" />
-              </div>
+          <div>
+            <img src={footerLogo} alt="" className="p-[20px] ml-[10%]" />
+          </div>
           <div className="flex flex-col lg:flex-row justify-center items-start gap-32 mb-10">
-
-           
             <div className="flex flex-col items-center text-center">
-              
               <p className="text-lg mb-4 font-semibold">
                 Download the Tanishq App Now
               </p>
@@ -584,7 +591,9 @@ function App() {
             <div>
               <div className="flex flex-col lg:flex-row justify-between items-center gap-40">
                 <div>
-                  <h3 className="text-lg font-semibold mb-3 text-left">Useful Links</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-left">
+                    Useful Links
+                  </h3>
                   <ul className="space-y-2 text-sm text-left">
                     <li>Delivery Information</li>
                     <li>International Shipping</li>
@@ -596,7 +605,9 @@ function App() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-3 text-left">Information</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-left">
+                    Information
+                  </h3>
                   <ul className="space-y-2 text-sm text-left">
                     <li>Blog</li>
                     <li>Offers & Contest Details</li>
@@ -606,46 +617,45 @@ function App() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-3 text-left">Contact Us</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-left">
+                    Contact Us
+                  </h3>
                   <p className="text-sm mb-4 text-left">1800-266-0123</p>
                   <h3 className="text-lg font-semibold mb-1">Chat With Us</h3>
                   <p className="text-xs mb-3">+91 8147349242</p>
-                     <hr />
+                  <hr />
                   <div className="flex gap-4 text-xl mt-2 ">
                     <FaWhatsapp className="hover:text-green-400 hover:cursor-pointer" />
-                    <FaEnvelope className="hover:text-yellow-400 hover:cursor-pointer"  />
+                    <FaEnvelope className="hover:text-yellow-400 hover:cursor-pointer" />
                     <FaComments className="hover:text-blue-600 hover:cursor-pointer" />
                   </div>
                 </div>
-
               </div>
-              
-                <hr className="border-gray-600 my-6" />
 
-                <div className="flex flex-col lg:flex-row justify-between mb-[20px] items-center gap-6">
-                  <div className="flex items-center gap-4">
-                    <span className="text-lg font-semibold">Social</span>
-                    <FaInstagram  className="hover:text-pink-700 hover:cursor-pointer"/>
-                    <FaFacebookF className="hover:text-blue-600 hover:cursor-pointer" />
-                    <FaYoutube className="hover:text-red-600 hover:cursor-pointer" />
-                  </div>
+              <hr className="border-gray-600 my-6" />
 
-                 
+              <div className="flex flex-col lg:flex-row justify-between mb-[20px] items-center gap-6">
+                <div className="flex items-center gap-4">
+                  <span className="text-lg font-semibold">Social</span>
+                  <FaInstagram className="hover:text-pink-700 hover:cursor-pointer" />
+                  <FaFacebookF className="hover:text-blue-600 hover:cursor-pointer" />
+                  <FaYoutube className="hover:text-red-600 hover:cursor-pointer" />
                 </div>
-                <hr className="text-gray-600" />
-                 <div className="flex items-center gap-4 mt-[20px] mb-[20px] text-2xl">
-                    <FaCcVisa />
-                    <FaCcMastercard />
-                    <FaCcPaypal />
-                    <FaCcDinersClub />
-                    <FaCcDiscover />
-                  </div>
-                  <hr className="text-gray-600"  />
+              </div>
+              <hr className="text-gray-600" />
+              <div className="flex items-center gap-4 mt-[20px] mb-[20px] text-2xl">
+                <FaCcVisa />
+                <FaCcMastercard />
+                <FaCcPaypal />
+                <FaCcDinersClub />
+                <FaCcDiscover />
+              </div>
+              <hr className="text-gray-600" />
 
               <div className="mt-10  flex flex-col lg:flex-row justify-between items-center gap-6 text-xs text-center md:text-left text-gray-300">
                 <div>
                   <p>© 2025 Titan Company Limited. All Rights Reserved.</p>
-                  </div>
+                </div>
                 <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-2 text-xs">
                   <a href="#">Terms & Conditions</a>
                   <a href="#">Privacy Policy</a>

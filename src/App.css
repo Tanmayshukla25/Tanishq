@@ -3,8 +3,15 @@
 *{
    
     box-sizing: border-box;
-    font-family: "Roboto"
+  
 }
 body{
     background-color: rgba(211, 211, 211, 0.364);
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+}
+p{
+      font-family: 'Fraunces', serif;
 }
