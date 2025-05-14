@@ -20,7 +20,7 @@ function Navbarpage() {
   return (
     <>
       <div className="bg-white shadow-[0_0px_10px_gray] p-5 ">
-        <nav className="flex flex-wrap items-center justify-between fixed top-0 left-0 right-0 z-50 bg-white p-2 sm:p-4">
+        <nav className="flex flex-wrap items-center justify-around fixed top-0 left-0 right-0 z-50 bg-white p-2 sm:p-4">
           <div className="w-[70px] h-[50px]">
             <img src={tanishqLogo} alt="Tanishq Logo" />
           </div>

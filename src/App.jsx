@@ -215,7 +215,7 @@ function App() {
     </p>
   </div>
 
-  <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2">
    
     <div className="w-full sm:w-[606px]">
      
@@ -412,7 +412,7 @@ function App() {
         </div>
       </div>
 
-      <div className="text-center mt-5 h-[110vh]">
+      <div className="text-center mt-5 h-[90vh]">
         <div>
           <h1 className="text-4xl ">Curated For You</h1>
           <p className="text-2xl text-gray-500">Shop By Gender</p>
