@@ -30,7 +30,7 @@ function Navbarpage() {
               <IoSearchOutline />
             </span>
             <input
-              className="w-full border px-10 py-2.5 rounded-[25px] border-gray-300 text-sm sm:text-base"
+              className="w-full border px-10 py-2.5 rounded-[25px] border-gray-300 sm:text-sm"
               type="text"
               style={{ fontFamily: "'Nunito Sans', sans-serif" }}
               placeholder="Search for Gold jewellery, Diamond jewellery and more..."
@@ -66,94 +66,104 @@ function Navbarpage() {
           className="flex flex-wrap items-center justify-around pt-5 px-[5rem] font-Playfair Display text-sm font-medium text-gray-700 mt-13"
           style={{ fontFamily: "'IBM Plex Sans', sans-serif" }}
         >
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800  hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={AllJewellery} alt="All Jewellery" />
             </div>
-            <span>All Jewellery</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              All Jewellery
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={goldImages} alt="Gold" />
             </div>
-            <span>Gold</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Gold
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={diamond} alt="Diamond" />
             </div>
-            <span>Diamond</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Diamond
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={Earring} alt="Earrings" />
             </div>
-            <span>Earrings</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Earrings
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={Ring} alt="Rings" />
             </div>
-            <span>Rings</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Rings
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={dailyWear} alt="Daily Wear" />
             </div>
-            <span>Daily Wear</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Daily Wear
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={collection} alt="Collections" />
             </div>
-            <span>Collections</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Collections
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={Wedding} alt="Wedding" />
             </div>
-            <span>Wedding</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Wedding
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={gifting} alt="Gifting" />
             </div>
-            <span>Gifting</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              Gifting
+            </span>
           </div>
 
-          <div className="relative group inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer">
+          <div className="relative inline-flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:scale-105 cursor-pointer group">
             <div className="w-[20px] h-[20px]">
               <img src={more} alt="More" />
             </div>
-            <span>More</span>
 
-            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-orange-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative after:content-[''] after:absolute after:top-6 after:left-1/2 after:w-0 after:h-[2px] after:bg-orange-800 after:transition-all after:duration-300 group-hover:after:w-full group-hover:after:left-0">
+              More
+            </span>
           </div>
         </div>
       </div>

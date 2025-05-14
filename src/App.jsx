@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import Navbarpage from "./navbar";
 import Slider from "./Sliderimages";
 import "./App.css";
@@ -56,51 +56,18 @@ import {
 } from "react-icons/fa";
 
 import { GrNext } from "react-icons/gr";
-import { GrPrevious } from "react-icons/gr";
 
-const images = [
-  "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw70645f50/homepage/HeroBanner/prettypink-mobile.jpg",
-  "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwb9bcbcfb/homepage/HeroBanner/prettypink-desktop.jpg",
-  "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw04a43e9c/homepage/HeroBanner/dailywear-desktop.jpg",
-];
+import TopImagesSlider from "./topImagesSlider"
+
+
 
 function App() {
-  const [current, setCurrent] = useState(0);
-  const length = images.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+ 
 
   return (
     <>
       <Navbarpage />
-      <div className="relative w-full mx-auto mt-6  mb-[20px]">
-        <div className="overflow-hidden rounded-xl shadow-md h-[75vh]">
-          <img
-            src={images[current]}
-            alt={`Slide ${current}`}
-            className="w-full h-auto object-cover transition duration-700 ease-in-out "
-          />
-        </div>
-
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md"
-        >
-          <GrPrevious />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md"
-        >
-          <GrNext />
-        </button>
-      </div>
+     <TopImagesSlider/>
 
       <div className="text-center">
         <div className="mt-[50px] mb-6 pt-[40px]">
@@ -295,7 +262,7 @@ function App() {
                 500+ New Items
               </span>
             </div>
-            <p className="text-white text-lg sm:text-3xl w-full sm:w-[750px] mt-3">
+            <p className="text-white   w-full mt-3">
               New Arrivals Dropping Daily, Monday through Friday. Explore the
               Latest Launches Now!
             </p>
@@ -322,37 +289,36 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-wrap align-items-center justify-center w-[100%] gap-25 h-[400px] border-t-1 border-gray-300">
-        <div className="w-[40%] border-r-1 border-gray-300 flex flex-col items-center justify-center text-center">
-          <h1 className="text-6xl">
-            Tanishq <span className="text-amber-700">Assurance</span>
-          </h1>
-          <p className="text-gray-400 text-2xl">
-            Crafted by experts, cherished by you
-          </p>
-        </div>
+    <div className="flex flex-wrap items-center justify-center w-full border-t border-gray-300 py-10 px-4">
+ 
+  <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-gray-300 flex flex-col items-center justify-center text-center p-6">
+    <h1 className="text-4xl md:text-6xl font-bold">
+      Tanishq <span className="text-amber-700">Assurance</span>
+    </h1>
+    <p className="text-gray-400 text-lg md:text-2xl mt-4">
+      Crafted by experts, cherished by you
+    </p>
+  </div>
 
-        <div className="flex flex-wrap align-items-center justify-between w-[30%] mt-[8rem]">
-          <div className="w-[100px]">
-            <img src={tanishqimg} alt="" className="mix-blend-color-burn" />
-            <h2 className="w-[200xp]">Quality Craftmanship</h2>
-          </div>
+ 
+  <div className="w-full md:w-1/2 flex flex-wrap items-center justify-around gap-6 mt-10 md:mt-0 p-6">
+    <div className="flex flex-col items-center text-center w-[120px]">
+      <img src={tanishqimg} alt="Quality Craftmanship" className="w-16 h-16 mix-blend-color-burn mb-2" />
+      <h2 className="text-sm font-medium">Quality Craftmanship</h2>
+    </div>
 
-          <div className="w-[100px]">
-            <img src={heartimg} alt="" className="mix-blend-color-burn" />
-            <h2 className="w-[200xp]">Ethically Sourced</h2>
-          </div>
+    <div className="flex flex-col items-center text-center w-[120px]">
+      <img src={heartimg} alt="Ethically Sourced" className="w-16 h-16 mix-blend-color-burn mb-2" />
+      <h2 className="text-sm font-medium">Ethically Sourced</h2>
+    </div>
 
-          <div className="w-[100px]">
-            <img
-              src={tanishqtransparency}
-              alt=""
-              className="mix-blend-color-burn"
-            />
-            <h2 className="w-[200xp]">100% Transparency</h2>
-          </div>
-        </div>
-      </div>
+    <div className="flex flex-col items-center text-center w-[120px]">
+      <img src={tanishqtransparency} alt="100% Transparency" className="w-16 h-16 mix-blend-color-burn mb-2" />
+      <h2 className="text-sm font-medium">100% Transparency</h2>
+    </div>
+  </div>
+</div>
+
 
       <div className="text-center mt-5">
         <div>
@@ -378,7 +344,7 @@ function App() {
       </div>
 
       <div>
-        <div className="flex flex-wrap align-items-center justify-center gap-45 mt-10 h-[200px]">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10 lg:gap-16 xl:gap-20 mt-10 min-h-[200px] px-4">
           <div className="w-[100px]">
             <img
               src={tanishqexchange}
@@ -412,96 +378,124 @@ function App() {
         </div>
       </div>
 
-      <div className="text-center mt-5 h-[90vh]">
-        <div>
-          <h1 className="text-4xl ">Curated For You</h1>
-          <p className="text-2xl text-gray-500">Shop By Gender</p>
-        </div>
-        <div className="text-center">
-          <div className="flex flex-wrap items-center justify-center gap-5">
-            <div className="w-[400px] h-[450px]">
-              <img
-                src={CuratedImgge}
-                alt="Gold Earrings"
-                className="rounded-xl w-full h-full object-cover"
-              />
-              <h2 className="p-4 text-xl">Women jewellery</h2>
-            </div>
-
-            <div className="w-[400px] h-[450px]">
-              <img
-                src={sbgmen}
-                alt="Gold Earrings"
-                className="rounded-xl w-full h-full object-cover"
-              />
-              <h2 className="p-4 text-xl">Men jewellery</h2>
-            </div>
-            <div className="w-[400px] h-[450px]">
-              <img
-                src={sbgkid}
-                alt="Gold Earrings"
-                className="rounded-xl w-full h-full object-cover"
-              />
-              <h2 className="p-4 text-xl">Kids jewellery</h2>
-            </div>
-          </div>
-        </div>
+   <div className="text-center mt-20 h-auto sm:h-[90vh]">
+  <div>
+    <h1 className="text-3xl sm:text-4xl">Curated For You</h1>
+    <p className="text-xl sm:text-2xl text-gray-500">Shop By Gender</p>
+  </div>
+  
+  <div className="text-center">
+    <div className="flex flex-wrap items-center justify-center gap-5">
+      
+      {/* Women Jewellery */}
+      <div className="w-full sm:w-[300px] h-auto sm:h-[350px]">
+        <img
+          src={CuratedImgge}
+          alt="Gold Earrings"
+          className="rounded-xl w-full h-auto object-cover"
+        />
+        <h2 className="p-4 text-lg sm:text-xl">Women jewellery</h2>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-20 mb-[20px]">
-        <div className="bg-[#f2e7e9] mt-1 w-full sm:w-[645px] h-[640px] shadow-[0_0px_2px_gray] rounded-4xl relative">
-          <div className="bg-orange-800 w-[40px] h-[640px] absolute left-0 sm:left-23"></div>
-          <div className="bg-orange-800 w-full sm:w-[645px] h-[40px] absolute bottom-0 sm:bottom-23"></div>
+      {/* Men Jewellery */}
+      <div className="w-full sm:w-[300px] h-auto sm:h-[350px]">
+        <img
+          src={sbgmen}
+          alt="Gold Earrings"
+          className="rounded-xl w-full h-auto object-cover"
+        />
+        <h2 className="p-4 text-lg sm:text-xl">Men jewellery</h2>
+      </div>
 
-          <div className="w-[200px] absolute bottom-4 sm:bottom-13 left-4 sm:left-12">
-            <img src={flower} alt="" />
-          </div>
-          <div className="absolute top-12 sm:top-30 right-4 sm:right-25">
-            <h1 className="text-3xl sm:text-6xl text-amber-900">
-              #GiftOfChoice
-            </h1>
-            <p className="text-gray-700 text-lg sm:text-xl mt-4 sm:mt-5">
-              Breathtaking gifts for your loved one’s
-            </p>
-            <h3 className="text-amber-900 text-xl sm:text-2xl">
-              STARTING AT ₹10,000
-            </h3>
-            <button className="bg-white px-6 py-3 sm:px-8 sm:py-3 text-lg sm:text-xl rounded-3xl flex items-center border-1 mt-4 sm:mt-6 border-amber-950">
-              Explore Now{" "}
-              <span className="mt-1 ml-2">
-                <GrNext />
-              </span>
-            </button>
-          </div>
-        </div>
+      {/* Kids Jewellery */}
+      <div className="w-full sm:w-[300px] h-auto sm:h-[350px]">
+        <img
+          src={sbgkid}
+          alt="Gold Earrings"
+          className="rounded-xl w-full h-auto object-cover"
+        />
+        <h2 className="p-4 text-lg sm:text-xl">Kids jewellery</h2>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
-        <div className="bg-[#fffcf7] mt-1 w-full sm:w-[545px] h-[640px] rounded-4xl border-1 border-amber-400 relative">
-          <div className="bg-[#fffcf7] w-[65px] h-[570px] mt-[35px] rounded-3xl border-l-1 border-amber-400 absolute left-[-45px] sm:left-[-45px]"></div>
-          <div className="bg-[#fffcf7] w-[65px] h-[570px] mt-[35px] rounded-3xl border-r-1 border-amber-400 absolute right-[-45px] sm:right-[-45px]"></div>
 
-          <div className="absolute left-7 top-12 sm:top-20 w-[80px] sm:w-[100px]">
-            <img src={homeexchange} alt="" className="w-full" />
-          </div>
 
-          <div className="absolute top-36 sm:top-50 right-4 sm:right-25 w-[90%] sm:w-auto">
-            <h1 className="text-xl sm:text-4xl">
-              Exchange your Old Gold for 100% Value!
-            </h1>
-            <p className="text-lg sm:text-xl mt-4 sm:mt-5">
-              Unlock full value for your old gold today with our{" "}
-              <span className="text-black font-extrabold">
-                Exchange Program !
-              </span>
-            </p>
+         
 
-            <button className="bg-white px-6 py-3 sm:px-8 sm:py-3 rounded-3xl flex text-lg sm:text-xl items-center border-1 mt-8 sm:mt-16 border-amber-500">
-              Know More
-              <span className="mt-1 ml-2">
-                <GrNext />
-              </span>
-            </button>
-          </div>
-        </div>
+      <div className="flex flex-wrap items-center justify-center mb-[20px]">
+     <div className="bg-[#f2e7e9] mt-1 w-full max-w-[90%] sm:max-w-[645px] h-[500px] sm:h-[640px] mx-auto shadow-[0_0_2px_gray] rounded-[2rem] relative">
+ 
+  <div className="bg-orange-800 w-[40px] h-[500px] sm:h-[640px] absolute left-10"></div>
+
+  
+  <div className="bg-orange-800 w-full h-[40px] absolute bottom-10"></div>
+
+ 
+ <div className="w-[80px] sm:w-[100px] absolute bottom-4 sm:bottom-[10px] left-6 sm:left-[1rem]">
+  <img src={flower} alt="" className="w-full" />
+</div>
+
+
+
+  <div className="absolute top-12 sm:top-[7.5rem] right-4 sm:right-[6.25rem]">
+    <h1 className="text-3xl sm:text-6xl text-amber-900">
+      #GiftOfChoice
+    </h1>
+    <p className="text-gray-700  sm:text-xl mt-4 sm:mt-5">
+      Breathtaking gifts for your loved one’s
+    </p>
+    <h3 className="text-amber-900 text-xl sm:text-2xl mt-2">
+      STARTING AT ₹10,000
+    </h3>
+   <button className="bg-white px-5 py-2 sm:px-8 sm:py-3 rounded-3xl flex text-base sm:text-xl items-center border mt-6 sm:mt-16 text-amber-900">
+  Explore Now
+  <span className="mt-1 ml-2">
+    <GrNext />
+  </span>
+</button>
+
+  </div>
+</div>
+
+
+
+      <div className="bg-[#fffcf7] mt-1 w-full max-w-[75%]  h-[500px] sm:w-[545px] sm:h-[640px] mx-auto rounded-[2rem] border border-amber-400 relative">
+
+  <div className="bg-[#fffcf7] w-[50px] h-[440px] sm:w-[65px] sm:h-[570px] mt-[30px] sm:mt-[35px] rounded-3xl border-l border-amber-400 absolute -left-[35px] sm:-left-[45px]"></div>
+
+
+  <div className="bg-[#fffcf7] w-[50px] h-[440px] sm:w-[65px] sm:h-[570px] mt-[30px] sm:mt-[35px] rounded-3xl border-r border-amber-400 absolute -right-[35px] sm:-right-[45px]"></div>
+
+
+  <div className="absolute left-5 top-10 sm:top-20 w-[70px] sm:w-[100px]">
+    <img src={homeexchange} alt="" className="w-full" />
+  </div>
+
+
+  <div className="absolute top-[7rem] sm:top-[12.5rem] right-3 sm:right-[6.25rem] w-[90%] sm:w-auto">
+    <h1 className="text-lg sm:text-4xl">
+      Exchange your Old Gold for 100% Value!
+    </h1>
+    <p className="text-base sm:text-xl mt-3 sm:mt-5">
+      Unlock full value for your old gold today with our{" "}
+      <span className="text-black font-extrabold">
+        Exchange Program!
+      </span>
+    </p>
+
+    <button className="bg-white px-5 py-2 sm:px-8 sm:py-3 rounded-3xl flex text-base sm:text-xl items-center border mt-6 sm:mt-16 border-amber-500">
+      Know More
+      <span className="mt-1 ml-2">
+        <GrNext />
+      </span>
+    </button>
+  </div>
+</div>
+
+
       </div>
 
       <Slider />
