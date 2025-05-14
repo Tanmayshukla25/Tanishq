@@ -27,7 +27,21 @@ function Slider() {
 
     return(
         <>
-        <div className="relative h-[600px] w-[320px] mx-auto mt-10">
+       
+       <div>
+        
+   <div className="text-center ">
+        <div>
+          <h1 className="text-3xl mt-20 ">Styling 101 With Diamonds</h1>
+          <p className="text-2xl text-gray-500">Trendsetting diamond jewellery suited for every occasion</p>
+        </div>
+       
+      </div>
+
+
+         <div className="relative h-[600px] w-[320px] mx-auto mt-10">
+
+
             {cards.map((items,index)=>(
                 <motion.div key={index}  className={`absolute top-0 left-0 w-full h-full rounded-xl overflow-hidden shadow-xl transition-all duration-500 ${
              index === 1
@@ -47,6 +61,7 @@ function Slider() {
             ))}
 
         </div>
+       </div>
         </>
     )
 }
@@ -54,3 +69,4 @@ function Slider() {
 export default Slider;
 
 <motion/>
+

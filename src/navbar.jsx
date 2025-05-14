@@ -43,7 +43,7 @@ function Navbarpage() {
             </span>
           </form>
 
-          <div className="flex items-center gap-6 text-2xl sm:text-3xl mt-3 text-amber-900">
+          <div className="flex items-center gap-6 text-xl sm:text-xl mt-3 text-amber-900">
             <span>
               <IoDiamondOutline />
             </span>
@@ -63,7 +63,7 @@ function Navbarpage() {
         </nav>
 
         <div
-          className="flex flex-wrap items-center justify-around pt-5 px-[4rem] font-Playfair Display text-sm font-medium text-gray-700 mt-13"
+          className="flex flex-wrap items-center justify-around pt-5 px-[5rem] font-Playfair Display text-sm font-medium text-gray-700 mt-13"
           style={{ fontFamily: "'IBM Plex Sans', sans-serif" }}
         >
           <span className="flex items-center gap-1 text-gray-700 transition-all duration-300 hover:text-orange-800 hover:underline hover:scale-105">
